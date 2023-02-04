@@ -1,8 +1,15 @@
 <script>
 export default {
-  name: "App",
+  data() {
+    return {
+      text1: "abc",
+      text2: "ABC",
+    };
+  },
 };
 </script>
+
 <template>
-  <div>Hello Elmazik!</div>
+  <p>{{ text1 }}</p>
+  <p>{{ text2 }}</p>
 </template>
