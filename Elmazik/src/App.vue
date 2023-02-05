@@ -1,12 +1,15 @@
 <script>
 export default {
-  data() {},
+  data() {
+	return {
+		text: 'str',
+	}
+}
   methods: {
-    show: function () {
-      let now = new Date();
-      alert(now);
-    },
-  },
+	show: function() {
+		alert(this.text);
+	}
+}
 };
 </script>
 
