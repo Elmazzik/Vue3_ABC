@@ -1,18 +1,24 @@
 <script>
 export default {
   data() {
-	return {
-		text: 'str',
-	}
-}
+    return {
+      str: "string",
+    };
+  },
   methods: {
-	show: function() {
-		alert(this.text);
-	}
-}
+    show: function () {
+      let text = this.cape(this.text);
+      alert(text);
+    },
+    cape: function (str) {
+      return str[0].toUpperCase() + str.slice(1);
+    },
+  },
 };
 </script>
 
 <template>
-  <button @click="show">text</button>
+  <div>
+    <button @click="show()">Тык!</button>
+  </div>
 </template>
