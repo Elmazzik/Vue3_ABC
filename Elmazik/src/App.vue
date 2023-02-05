@@ -2,14 +2,12 @@
 export default {
   data() {
     return {
-      text1: "abc",
-      text2: "ABC",
+      attr: "./public/kotik.jpg",
     };
   },
 };
 </script>
 
 <template>
-  <p>{{ text1 }}</p>
-  <p>{{ text2 }}</p>
+  <img :src="attr" class="cat" />
 </template>
