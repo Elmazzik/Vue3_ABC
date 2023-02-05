@@ -2,13 +2,16 @@
 export default {
   data() {
     return {
-      var1: 111,
-      var2: 222,
+      arr: ["x", "y", "z"],
     };
   },
 };
 </script>
 
 <template>
-  {{ var1 + var2 }}
+  {{ arr[0] }}
+  <br />
+  {{ arr[1] }}
+  <br />
+  {{ arr[2] }}
 </template>
