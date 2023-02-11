@@ -1,24 +1,17 @@
 <script>
+import { normalizeProps } from 'vue';
+
 export default {
-  data() {
-    return {
-      str: "string",
-    };
-  },
+  data() { },
   methods: {
-    show: function () {
-      let text = this.cape(this.text);
-      alert(text);
-    },
-    cape: function (str) {
-      return str[0].toUpperCase() + str.slice(1);
+    show: function (i) {
+      alert(i ** 2);
     },
   },
 };
 </script>
 
 <template>
-  <div>
-    <button @click="show()">Тык!</button>
-  </div>
+  <button @click="show('2')">2</button>
+  <button @click="show('3')">3</button>
 </template>
