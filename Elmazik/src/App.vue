@@ -4,12 +4,12 @@ import { normalizeProps } from 'vue';
 export default {
   data() {
     return {
-      visible: true,
+      hidden: true,
     }
 },
 };
 </script>
 
 <template>
-<p v-if="visible">Lorem ipsum</p>
+  <p v-if="!hidden">Lorem ipsum</p>
 </template>
