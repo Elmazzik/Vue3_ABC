@@ -2,16 +2,24 @@
 import { normalizeProps } from 'vue';
 
 export default {
-  data() { },
-  methods: {
-    show: function (i) {
-      alert(i ** 2);
-    },
+  data() {
+    return {
+      text: 'Elmazik',
+    }
   },
+  methods: {
+      change: function (i) {
+        this.text = this.text + " " + "text...";
+      },
+      achange: function (i) {
+        this.text = "text...";
+      },
+    },
 };
 </script>
 
 <template>
-  <button @click="show('2')">2</button>
-  <button @click="show('3')">3</button>
+  {{ text }}
+  <button @click='change(text)'>change</button>
+  <button @click='achange(text)'>achange</button>
 </template>
