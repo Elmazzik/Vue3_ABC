@@ -4,22 +4,27 @@ import { normalizeProps } from 'vue';
 export default {
   data() {
     return {
-      text: 'Elmazik',
+      cost: 200,
+      amount: 3,
     }
   },
   methods: {
       change: function (i) {
-        this.text = this.text + " " + "text...";
-      },
-      achange: function (i) {
-        this.text = "text...";
+      this.amount = this.amount + 1;
+      this.cost = this.cost + 100;
       },
     },
+  computed: {
+    price: function () {
+      return this.cost * this.amount;
+    },
+  },
 };
 </script>
 
 <template>
-  {{ text }}
+  <p>{{ cost }}</p>
+  <p>{{ amount }}</p>
+  <p>{{ price }}</p>
   <button @click='change(text)'>change</button>
-  <button @click='achange(text)'>achange</button>
 </template>
