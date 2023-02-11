@@ -8,18 +8,14 @@ export default {
     }
 },
   methods: {
-    hide: function () {
-      this.visible = false;
-    },
-    nothide: function () {
-      this.visible = true;
+    toggle: function () {
+      this.visible = !this.visible;
     }
   }
 };
 </script>
 
 <template>
-  <button @click="hide" v-if="visible">hide</button>
-  <button @click="nothide" v-if="!visible">not hide</button>
-  <p v-if="visible">Hello!</p>
+  <button @click="toggle">first</button>
+  <p v-if="visible">one</p>
 </template>
