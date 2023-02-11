@@ -2,29 +2,17 @@
 import { normalizeProps } from 'vue';
 
 export default {
-  data() {
-    return {
-      cost: 200,
-      amount: 3,
-    }
-  },
+  data() {},
   methods: {
-      change: function (i) {
-      this.amount = this.amount + 1;
-      this.cost = this.cost + 100;
-      },
-    },
-  computed: {
-    price: function () {
-      return this.cost * this.amount;
-    },
+    elmaz: function (i) {
+      alert("Привет!");
+      return false;
   },
+},
 };
 </script>
 
 <template>
-  <p>{{ cost }}</p>
-  <p>{{ amount }}</p>
-  <p>{{ price }}</p>
-  <button @click='change(text)'>change</button>
+  <a href="elmaz.html" v-on:click.prevent><p>Тыкай сюда</p></a>
+  <button v-on:click.once="elmaz">button</button>
 </template>
