@@ -4,14 +4,22 @@ import { normalizeProps } from 'vue';
 export default {
   data() {
     return {
-      age: 26,
+      isAuth: true,
+}
+},
+methods: {
+    toggle: function () {
+    this.isAuth = !this.isAuth;
     }
   }
 };
 </script>
 
 <template>
-<p v-if="age < 18">Подросток</p>
-<p v-else-if="age >= 19 && age <= 25">Молодой человек</p>
-<p v-else>Мужчина</p>
+  <template v-if="isAuth">
+    <p>+++</p>
+    <p>+++</p>
+    <p>+++</p>
+  </template>
+  <button @click="toggle">скрыть</button>
 </template>
