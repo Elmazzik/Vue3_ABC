@@ -1,13 +1,14 @@
 <script>
-
+export default {
+  data() {
+  return {
+    cssClasses: 'active valid',
+  }
+  }
+}
 </script>
 <template>
-  <p>
-    1
-  </p>
-  <p>
-    2
-  </p>
+<p :class="cssClasses">text</p>
 </template>
 <style>
 p {
