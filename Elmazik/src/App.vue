@@ -1,23 +1,17 @@
 <script>
-import { normalizeProps } from 'vue';
 
-export default {
-  data() {
-    return {
-      arr: ['a', 'b', 'c'],
-    }
-  },
-  methods: {
-    add: function () {
-      this.arr.push('xxx');
-    }
-  }
-}
 </script>
-
 <template>
-  <p v-for="elem in arr">
-    {{ elem }}
+  <p>
+    1
   </p>
-  <button @click="add">add</button>
+  <p>
+    2
+  </p>
 </template>
+<style>
+p {
+  	  color:darkslateblue;
+      background-color: rgb(211, 214, 219);
+  	}
+</style>
