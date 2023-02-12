@@ -4,16 +4,14 @@ import { normalizeProps } from 'vue';
 export default {
   data() {
     return {
-      items: [1, 2, 3, 4, 5],
+      arr: ['x', 'y', 'z'],
     }
   },
 }
 </script>
 
 <template>
-  <p v-for="elem in items">{{ elem }}</p>
-    <div v-for="elem in items">{{ elem ** 2 }}</div>
     <ul>
-      <li v-for="elem in items">{{ elem }}</li>
+      <li v-for="(elem, key) in arr">{{ key + 1 }} {{ elem }}</li>
     </ul>
 </template>
