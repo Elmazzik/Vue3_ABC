@@ -4,32 +4,31 @@ import { normalizeProps } from 'vue';
 export default {
   data() {
     return {
-      obj: {
-        user1: '100$',
-        user2: '200$',
-        user3: '300$',
-      },
-    }
+      items: [1, 2, 3],
+      }
   },
 }
 </script>
 
 <template>
-Задание №1
-    <ul>
-      <li v-for="elem in obj">
-		{{ elem }}</li>
-    </ul>
-Задание №2
-    <ul>
-      <li v-for="(elem, key) in obj">
-		{{ key }} {{ elem }}</li>
-    </ul>
-Задание №3
-    <ul>
-      <li v-for="(elem, key, index) in obj">
-		{{ index }}
-		{{ key }}
-		{{ elem }}</li>
-    </ul>
+  <div>
+    <p>1</p>
+    <p class="divider"></p>
+  </div>
+  <div>
+    <p>2</p>
+    <p class="divider"></p>
+  </div>
+  <div>
+    <p>3</p>
+    <p class="divider"></p>
+  </div>
+  <ul>
+    <li>1</li>
+    <li class="divider"></li>
+    <li>2</li>
+    <li class="divider"></li>
+    <li>3</li>
+    <li class="divider"></li>
+  </ul>
 </template>
