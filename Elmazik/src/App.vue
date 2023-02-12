@@ -4,29 +4,20 @@ import { normalizeProps } from 'vue';
 export default {
   data() {
     return {
-      products: [
-        {
-          id: 1,
-          name: 'product1',
-        },
-        {
-          id: 2,
-          name: 'product2',
-        },
-        {
-          id: 3,
-          name: 'product3',
-        },
-      ]
+      arr: ['a', 'b', 'c'],
+    }
+  },
+  methods: {
+    add: function () {
+      this.arr.push('xxx');
     }
   }
 }
 </script>
 
 <template>
-<ul>
-    <li v-for="product in products" :key="product.name">
-		{{ product.name }}
-    </li>
-</ul>
+  <p v-for="elem in arr">
+    {{ elem }}
+  </p>
+  <button @click="add">add</button>
 </template>
