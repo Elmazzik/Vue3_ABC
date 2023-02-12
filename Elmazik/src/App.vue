@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-<p v-if="age < 18">подросток</p>
-<p v-else-if="age >= 19 && age <= 25">молодой человек</p>
-<p v-else>мужчина</p>
+<p v-if="age < 18">Подросток</p>
+<p v-else-if="age >= 19 && age <= 25">Молодой человек</p>
+<p v-else>Мужчина</p>
 </template>
