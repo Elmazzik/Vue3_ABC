@@ -16,10 +16,6 @@ methods: {
 </script>
 
 <template>
-  <template v-if="isAuth">
-    <p>+++</p>
-    <p>+++</p>
-    <p>+++</p>
-  </template>
+  <p v-show="isAuth">+++</p>
   <button @click="toggle">скрыть</button>
 </template>
