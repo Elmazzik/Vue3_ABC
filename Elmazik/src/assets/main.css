@@ -12,3 +12,6 @@ div {
 .cat {
   width: 20em;
 }
+* {
+  width: 150px;
+}
