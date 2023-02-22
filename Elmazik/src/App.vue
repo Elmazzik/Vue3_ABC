@@ -2,19 +2,23 @@
 export default {
   data() {
     return {
-      checked: true,
-    }
-  },
-  methods: {
-    toggle: function () {
-      this.checked = false;
+      arr: [],
     }
   }
 }
 </script>
 <template>
-      <input type="checkbox" v-model="checked">
-      <p v-if="checked">{{ checked ? 'текст' : 'скрыто' }}</p>
+  <input type="checkbox" v-model="arr" value="Русский">
+  <label>Русский</label>
+  <br>
+  <input type="checkbox" v-model="arr" value="Английский">
+  <label>Английский</label>
+  <br>
+  <input type="checkbox" v-model="arr" value="Крымскотатарский">
+  <label>Крымскотатарский</label>
+  <ul>
+  <li v-for="elem in arr">{{ elem }}</li>
+  </ul>
 </template>
 <style>
 
