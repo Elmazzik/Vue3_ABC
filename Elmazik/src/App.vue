@@ -11,7 +11,7 @@ export default {
 }
 </script>
 <template>
-	<p :class="obj">text</p>
+	<button @click="setDone">hide</button>
 </template>
 <style>
 
