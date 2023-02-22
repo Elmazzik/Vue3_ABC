@@ -2,12 +2,14 @@
 export default {
   data() {
     return {
+      isValid: true,
+      isDisabled: true,
     }
-  },
+  }
 }
 </script>
 <template>
-	<p :class="{ active: true, error: false }">котики!</p>
+  <p :class="{ valid: isValid, disable: isDisabled }">котики!</p>
 </template>
 <style>
 
