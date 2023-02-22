@@ -2,14 +2,13 @@
 export default {
   data() {
     return {
-      isValid: true,
-      isDisabled: true,
     }
   }
 }
 </script>
 <template>
-  <p :class="{ valid: isValid, disable: isDisabled }">котики!</p>
+  <p :style="{ color: 'green', background: 'yellow' }">Какой-то абзац</p>
+  <p :style="{ fontWeight: 'bold', fontStyle: 'italic' }">Ещё один абзац</p>
 </template>
 <style>
 
