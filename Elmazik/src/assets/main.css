@@ -1,6 +1,6 @@
 @import './base.css';
 
-div {
+* {
   background-color: #fcd9ce;
   color:darkslateblue;
   font-size: larger;
@@ -11,7 +11,4 @@ div {
 }
 .cat {
   width: 20em;
-}
-* {
-  width: 150px;
 }

@@ -1,18 +1,18 @@
 <script>
 export default {
   data() {
-  return {
-    cssClasses: 'active valid',
-  }
+    return {
+      obj: {
+        done: true,
+        selected: false,
+      },
+    }
   }
 }
 </script>
 <template>
-<p :class="cssClasses">text</p>
+	<p :class="obj">text</p>
 </template>
 <style>
-p {
-  	  color:darkslateblue;
-      background-color: rgb(211, 214, 219);
-  	}
+
 </style>
