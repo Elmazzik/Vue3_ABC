@@ -2,18 +2,27 @@
 export default {
   data() {
     return {
-      cat: ' ',
-      tea: ' '
+      cat: ['karamelka', 'korzhik', 'compot'],
+      tea: '',
+    }
+  },
+  methods: {
+    addcat: function () {
+      this.cat.unshift(this.cat);
     }
   }
 }
 </script>
 <template>
-  <input class="text-field__input" v-model="cat">
-  <p>{{ cat }}</p>
+  <ul class="styled">
+  <li v-for="(item, index) in 
+  			cat" :key="index">
+      {{ item }}
+  </li>
+  </ul>
+  <input class="text-field__input" v-model="bmteaw">
   <br>
-  <a href="#" class="inline-link-1" >cat</a>
-  <p ></p>
+  <button @click="addcat">Добавить</button>
 </template>
 <style>
 
