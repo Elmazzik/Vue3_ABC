@@ -1,20 +1,16 @@
+lines (12 sloc)  204 Bytes
+
 <script>
 import Employee from './components/Employee.vue'
 export default {
   components: {
     Employee
-  },
-  data() {
-    return {
-    }
-  },
-  methods: {
   }
 }
 </script>
 
 <template>
-  <Employee name="Эльмаз" surn="Мустафаева" age="18" />
+  <Employee :arg="{ a: 1, b: 2, c: 3 }" />
 </template>
 
 <style>
