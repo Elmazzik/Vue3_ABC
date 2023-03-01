@@ -1,3 +1,4 @@
+
 <script>
 import Employee from './components/Employee.vue'
 export default {
@@ -9,15 +10,14 @@ export default {
     }
   },
   methods: {
-    one: function (num1) {
-      document.write(num1)
+    one: function (name) {
+      document.write(name)
     },
-    two: function (num2) {
-      document.write(num2)
+    two: function (name, salary) {
+      document.write(name + '  ' + salary)
     }
   }
 }
-
 </script>
 
 
